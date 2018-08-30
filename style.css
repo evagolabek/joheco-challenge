@@ -113,3 +113,8 @@ label {
 #source ul {
 	list-style-type: none;
 }
+
+#footer img {
+	width: 125px;
+	height: 95px;
+}
