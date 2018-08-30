@@ -20,6 +20,7 @@ body {
 }
 
 p {
+	padding-top: 5px;
 	padding-right: 35px;
 	padding-left: 35px;
 	/*font-weight: 900;*/
@@ -41,18 +42,19 @@ h3 {
 
 .flex_box_container {
 	display: flex;
-	height: 200px;
+	/*height: 200px;*/
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .flex_box_item {
 	display: block;
-	height: 100px;
-	width: 50px;
-	flex: 1;
+	/*height: 100px;*/
+	width: 50%;
 }
 
 label {
+	padding-top: 5px;
 	font-style: italic;
 	color: navy;
 }
@@ -64,4 +66,8 @@ label {
     height: 45px;
     width: 45px;
     background-color: #eee;
+}
+
+.flex_box_item p {
+	margin-top: 5px;
 }
