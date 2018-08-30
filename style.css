@@ -39,5 +39,29 @@ h3 {
 	justify-content: center;
 }
 
+.flex_box_container {
+	display: flex;
+	height: 200px;
+	justify-content: center;
+}
 
+.flex_box_item {
+	display: block;
+	height: 100px;
+	width: 50px;
+	flex: 1;
+}
 
+label {
+	font-style: italic;
+	color: navy;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 45px;
+    background-color: #eee;
+}
