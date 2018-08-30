@@ -31,7 +31,7 @@ h3 {
 	padding-right: 35px;
 	padding-left: 35px;
 	color: #DC143C;
-	font-weight: 1050;
+	/*font-weight: 1050;*/
 	text-align: center;
 }
 
@@ -50,12 +50,13 @@ h3 {
 .flex_box_item {
 	display: block;
 	/*height: 100px;*/
-	width: 50%;
+	width: 40%;
 }
 
 label {
 	padding-top: 5px;
 	font-style: italic;
+	font-weight: 900;
 	color: navy;
 }
 
@@ -70,4 +71,28 @@ label {
 
 .flex_box_item p {
 	margin-top: 5px;
+}
+
+#flex_box_bottom {
+	display: flex;
+	justify-content: center;
+}
+
+#box_left {
+	/*margin-left: */
+	background-color: navy;
+	width: 40%;
+}
+
+#box_left p {
+	color: white;
+}
+
+#box_right {
+	width: 40%;
+	background-color: white;
+}
+
+#box_right p {
+	color: #DC143C;
 }
