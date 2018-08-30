@@ -13,24 +13,31 @@ img {
 }
 
 body {
-	font-family: Nunito,sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+	font-family: 'Nunito',sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    /*font-weight: bold;*/
 }
 
 p {
-	width: 75%;
 	padding-right: 35px;
 	padding-left: 35px;
+	/*font-weight: 900;*/
 	
 }
 
 h3 {
 	padding-right: 35px;
 	padding-left: 35px;
-	color: red;
+	color: #DC143C;
+	font-weight: 1050;
+	text-align: center;
 }
 
+#intro {
+	width: 100%;
+	justify-content: center;
+}
 
 
 
