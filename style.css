@@ -14,8 +14,8 @@ img {
 
 body {
 	font-family: 'Nunito',sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+	font-size: 18px;
+	line-height: 1.6;
     /*font-weight: bold;*/
 }
 
@@ -80,7 +80,7 @@ label {
 
 #box_left {
 	/*margin-left: */
-	background-color: navy;
+	background-color: #004d99;
 	width: 40%;
 }
 
@@ -95,4 +95,21 @@ label {
 
 #box_right p {
 	color: #DC143C;
+}
+
+#source {
+	display: flex;
+	width: 100%;
+	padding-top: 1px;
+	background-color: #f5f5f0;
+}
+
+#source ul li a {
+	color: black;
+	text-decoration-style: none;
+	font-size: 12px;
+}
+
+#source ul {
+	list-style-type: none;
 }
