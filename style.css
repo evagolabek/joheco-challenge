@@ -118,7 +118,22 @@ label {
 	list-style-type: none;
 }
 
-#footer img {
+.footer_wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
+	grid-auto-rows: minmax(100px, auto)
+
+}
+
+.footer_list {
+  /*display: grid;*/
+  grid-auto-rows: 70px;
+  grid-gap: 1em;
+  border: 2px solid green;
+}
+
+.footer_list img {
 	width: 125px;
 	height: 95px;
 }
