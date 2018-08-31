@@ -81,16 +81,20 @@ label {
 #box_left {
 	/*margin-left: */
 	background-color: #004d99;
-	width: 40%;
+	width: 38%;
+}
+
+#box_right {
+	width: 35%;
+	background-color: white;
+	/*border: 3px solid red;*/
+	margin-bottom: 30px;
+	margin-left: -30px;
 }
 
 #box_left p {
 	color: white;
-}
-
-#box_right {
-	width: 40%;
-	background-color: white;
+	z-index: 2;
 }
 
 #box_right p {
