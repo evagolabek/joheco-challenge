@@ -59,6 +59,8 @@ h3 {
 	margin-top: 5px;
 }
 
+/*BOTTOM BOXES*/
+
 #flex_box_bottom {
 	display: flex;
 	justify-content: center;
@@ -102,30 +104,22 @@ h3 {
 	list-style-type: none;
 }
 
-.footer_wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 1em;
-	grid-auto-rows: minmax(70px, auto)
+/*FOOTER*/
+
+.footer_wrapper {	
+	display: inline-flex;
+	width: 100%;
 }
 
 .footer_list {
-  grid-auto-rows: 25%;
-  grid-gap: 1em;
-  border: 2px solid blue;
+	display: block;
+	margin-top: 35px;
 }
 
 .footer_list img {
-	width: 125px;
-	height: 95px;
-	margin-top: 25px;
-}
-
-.footer_list ul {
-	color: black;
-	list-style-type: none;
-	font-size: 12px;
-	line-height: 0.7;
+	width: 155px;
+	height: 115px;
+	
 }
 
 .footer_list li {
@@ -133,16 +127,11 @@ h3 {
 	text-decoration: none; 
 	list-style-type: none;
 	font-size: 12px;
-	margin-top: 25px;
-	line-height: 0.7;
+	line-height: 1.6;
+	
 }
 
-.footer_list h6 {
-	margin-top: 25px;
-	margin-bottom: 1px;
-	margin-left: 30px;
-	line-height: 0.7;
-}
+
 
 
 /*CHECKBOXES */
