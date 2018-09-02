@@ -16,14 +16,12 @@ body {
 	font-family: 'Nunito',sans-serif;
 	font-size: 18px;
 	line-height: 1.6;
-    /*font-weight: bold;*/
 }
 
 p {
 	padding-top: 5px;
-	padding-right: 35px;
-	padding-left: 35px;
-	/*font-weight: 900;*/
+	padding-right: 25px;
+	padding-left: 25px;
 	
 }
 
@@ -31,18 +29,20 @@ h3 {
 	padding-right: 35px;
 	padding-left: 35px;
 	color: #DC143C;
-	/*font-weight: 1050;*/
 	text-align: center;
 }
 
-#intro {
-	width: 100%;
+
+#main {
+	width: 80%;
 	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+
 }
 
 .flex_box_container {
 	display: flex;
-	/*height: 200px;*/
 	justify-content: center;
 	flex-wrap: wrap;
 }
@@ -60,14 +60,6 @@ label {
 	color: navy;
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 45px;
-    width: 45px;
-    background-color: #eee;
-}
 
 .flex_box_item p {
 	margin-top: 5px;
@@ -79,7 +71,6 @@ label {
 }
 
 #box_left {
-	/*margin-left: */
 	background-color: #004d99;
 	width: 38%;
 }
@@ -87,7 +78,6 @@ label {
 #box_right {
 	width: 35%;
 	background-color: white;
-	/*border: 3px solid red;*/
 	margin-bottom: 30px;
 	margin-left: -30px;
 }
@@ -122,18 +112,42 @@ label {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 1em;
-	grid-auto-rows: minmax(100px, auto)
-
+	grid-auto-rows: minmax(70px, auto)
 }
 
 .footer_list {
-  /*display: grid;*/
-  grid-auto-rows: 70px;
+  grid-auto-rows: 25%;
   grid-gap: 1em;
-  border: 2px solid green;
+  border: 2px solid blue;
 }
 
 .footer_list img {
 	width: 125px;
 	height: 95px;
+	margin-top: 25px;
 }
+
+.footer_list ul {
+	color: black;
+	list-style-type: none;
+	font-size: 12px;
+	line-height: 0.7;
+}
+
+.footer_list li {
+	color: black;
+	text-decoration: none; 
+	list-style-type: none;
+	font-size: 12px;
+	margin-top: 25px;
+	line-height: 0.7;
+}
+
+.footer_list h6 {
+	margin-top: 25px;
+	margin-bottom: 1px;
+	margin-left: 30px;
+	line-height: 0.7;
+}
+
+
