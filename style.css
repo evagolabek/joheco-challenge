@@ -109,28 +109,46 @@ h3 {
 .footer_wrapper {	
 	display: inline-flex;
 	width: 100%;
+	justify-content: flex-end;
 }
 
 .footer_list {
 	display: block;
 	margin-top: 35px;
+	margin-right: 20px;
 }
 
 .footer_list img {
 	width: 155px;
 	height: 115px;
-	
 }
 
-.footer_list li {
+.footer_list p {
 	color: black;
-	text-decoration: none; 
-	list-style-type: none;
 	font-size: 12px;
 	line-height: 1.6;
-	
 }
 
+#right_elem {
+	margin-right: 25%;
+}
+
+#right_elem > strong {
+	display: block;
+	margin-top: 8%;
+	font-size: 16px;
+}
+
+.footer_list p {
+	display: inline-block;
+	margin: 0;
+	padding: 0 20px 0 0;
+}
+
+.footer_list a {
+	color: black;
+	text-decoration: none;
+}
 
 
 
@@ -167,12 +185,6 @@ h3 {
     border: 1px solid black;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: white;
 }
