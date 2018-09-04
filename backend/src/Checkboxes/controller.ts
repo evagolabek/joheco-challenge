@@ -5,12 +5,12 @@ import Checkbox from './entity'
 @JsonController()
 export default class checkboxController {
 
-  @Get('/checkboxes/:id')
-  getcheckbox(
-  @Param('id') id: number
-  ) {
-  return Checkbox.findOne(id)
-  }
+  // @Get('/checkboxes/:id')
+  // getcheckbox(
+  // @Param('id') id: number
+  // ) {
+  // return Checkbox.findOne(id)
+  // }
 
   @Get('/checkboxes')
   async allcheckboxes() {
@@ -29,13 +29,13 @@ export default class checkboxController {
   return Checkbox.merge(checkbox, update).save()
   }
 
-  @Post('/checkboxes')
-  @HttpCode(201)
-  createcheckbox(
-      @Body() body: Checkbox
-  ): Checkbox {
-      console.log(`Incoming POST body param:`, body)
-      return body
-  }
+  // @Post('/checkboxes')
+  // @HttpCode(201)
+  // createcheckbox(
+  //     @Body() body: Checkbox
+  // ): Checkbox {
+  //     console.log(`Incoming POST body param:`, body)
+  //     return body
+  // }
 
 }

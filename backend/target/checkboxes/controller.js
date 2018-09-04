@@ -15,9 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const routing_controllers_1 = require("routing-controllers");
 const entity_1 = require("./entity");
 let checkboxController = class checkboxController {
-    getcheckbox(id) {
-        return entity_1.default.findOne(id);
-    }
     async allcheckboxes() {
         const checkboxes = await entity_1.default.find();
         return { checkboxes };
@@ -28,18 +25,7 @@ let checkboxController = class checkboxController {
             throw new routing_controllers_1.NotFoundError('Cannot find checkbox');
         return entity_1.default.merge(checkbox, update).save();
     }
-    createcheckbox(body) {
-        console.log(`Incoming POST body param:`, body);
-        return body;
-    }
 };
-__decorate([
-    routing_controllers_1.Get('/checkboxes/:id'),
-    __param(0, routing_controllers_1.Param('id')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", void 0)
-], checkboxController.prototype, "getcheckbox", null);
 __decorate([
     routing_controllers_1.Get('/checkboxes'),
     __metadata("design:type", Function),
@@ -54,14 +40,6 @@ __decorate([
     __metadata("design:paramtypes", [Number, Object]),
     __metadata("design:returntype", Promise)
 ], checkboxController.prototype, "updatecheckbox", null);
-__decorate([
-    routing_controllers_1.Post('/checkboxes'),
-    routing_controllers_1.HttpCode(201),
-    __param(0, routing_controllers_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [entity_1.default]),
-    __metadata("design:returntype", entity_1.default)
-], checkboxController.prototype, "createcheckbox", null);
 checkboxController = __decorate([
     routing_controllers_1.JsonController()
 ], checkboxController);
