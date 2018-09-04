@@ -5,6 +5,7 @@ import CheckboxController from './checkboxes/controller'
 import setupDb from './db'
 
 const app = createKoaServer({
+  cors: true,
   controllers: [
     CheckboxController
   ]
