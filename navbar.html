@@ -1,11 +1,33 @@
-<div class="sidenav">
-	<h1><img src="./logo.jpg" alt="joheco"></h1>
-	<h6>OUR SERVICES</h6>
-	<a href="#about">About</a>
-	<a href="#services">Services</a>
-	<a href="#clients">Clients</a>
-	<a href="#contact">Contact</a>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>NAVBAR</title>
+	</head>
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<h1><img src="./logo.jpg" alt="joheco"></h1>
+			<h6>OUR SERVICES</h6>
+			<a href="#about">About</a>
+			<a href="#services">Services</a>
+			<a href="#clients">Clients</a>
+			<a href="#contact">Contact</a>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+		<script>
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+		</script>
+	</body>
+</html>
 
 <style>
 
@@ -39,9 +61,17 @@ color: #f1f1f1;
     .sidenav a {font-size: 18px;}
 }
 
-.main { 
-    font-size: 28px; 
+.main {
+    font-size: 28px;
     padding: 0px 10px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 </style>
