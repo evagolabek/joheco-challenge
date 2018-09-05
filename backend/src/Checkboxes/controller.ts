@@ -1,5 +1,5 @@
 
-import { JsonController, Get, Post,HttpCode, Param, Put, Body, NotFoundError } from 'routing-controllers'
+import { JsonController, Get, Post, HttpCode, Param, Put, Body, NotFoundError } from 'routing-controllers'
 import Checkbox from './entity'
 
 @JsonController()
@@ -23,6 +23,8 @@ export default class checkboxController {
   @Param('id') id: number,
   @Body() update: Partial<Checkbox>
   ) {
+    console.log("--------------------------")
+    console.log(id, update)
   const checkbox = await Checkbox.findOne(id)
   if (!checkbox) throw new NotFoundError('Cannot find checkbox')
 

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/EvaGolabek/.nvm/versions/node/v8.5.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /Users/EvaGolabek/.nvm/versions/node/v8.5.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js compile
 
 PATH: 
   /Users/EvaGolabek/.nvm/versions/node/v8.5.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:
@@ -24,6 +24,7 @@ npm manifest:
       "@types/koa-bodyparser": "^5.0.1",
       "@types/koa-multer": "^1.0.0",
       "@types/koa-router": "^7.0.31",
+      "kcors": "^2.2.2",
       "koa": "^2.5.2",
       "koa-bodyparser": "^4.2.1",
       "koa-multer": "^1.0.2",
@@ -34,7 +35,9 @@ npm manifest:
       "typescript": "^3.0.3"
     },
     "scripts": {
-      "start": "node ."
+      "start": "node .",
+      "dev": "nodemon .",
+      "compile": "tsc"
     }
   }
 
@@ -582,6 +585,10 @@ Lockfile:
     dependencies:
       argparse "^1.0.7"
       esprima "^4.0.0"
+  
+  kcors@^2.2.2:
+    version "2.2.2"
+    resolved "https://registry.yarnpkg.com/kcors/-/kcors-2.2.2.tgz#b6250e7a4f0a33c8f477b7fd0dfa11a3f3ca518d"
   
   keygrip@~1.0.2:
     version "1.0.2"
@@ -1258,9 +1265,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c node .
+  Arguments: -c tsc
   Directory: /Users/EvaGolabek/Joheco/joheco-challenge/backend
   Output:
   

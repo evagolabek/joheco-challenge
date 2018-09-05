@@ -20,6 +20,8 @@ let checkboxController = class checkboxController {
         return { checkboxes };
     }
     async updatecheckbox(id, update) {
+        console.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+        console.log(id, update);
         const checkbox = await entity_1.default.findOne(id);
         if (!checkbox)
             throw new routing_controllers_1.NotFoundError('Cannot find checkbox');
