@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+    //on page load it sends a GET request to the backend to get all the checkboxes values,
+    // then it changes the value of each checkbox in the html inside the for loop
+
+    var request = new XMLHttpRequest();
+    request.open('GET', 'http://localhost:4000/checkboxes', true);
+    request.onload = function () {
+      var data = JSON.parse(this.response);
+      if (request.status >= 200 && request.status < 400) {
+        $("#div1").html(this.response);
+        console.log(data);
+        var arrayLength = data.checkboxes.length;
+        for (var i = 0; i < arrayLength; i++) {
+            var id = data.checkboxes[i].id
+            var value = data.checkboxes[i].value
+            document.getElementById(id).checked = value;
+        }
+      } else {
+        console.log('error');
+      }
+    }
+    request.send();
+
+    //when a checkbox is clicked, it triggers the update function.
+    //It then sends a PUT request to the backend with the checkbox id and value
+
+    function update(box) {
+      console.log("CLICKED", box.id, box.checked);
+      var request = new XMLHttpRequest();
+      request.open('PUT', 'http://localhost:4000/checkboxes/'+box.id, true);
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      request.send("value="+box.checked)
+    }
+
+</script>
+</head>
+<body>
+
+<div id="div1"></div>
+
+<!-- <button>Get Checkbox Value</button> -->
+<div class="flex_box_container">
+  <div class="flex_box_item">
+      <label class="container"><input type="checkbox" id="1" onchange="update(this)"><span class="checkmark"></span>Analyseer de huidige situatie</label>
+    <p>
+      Controleer allereerst welke gegevens je in huis hebt, waar al je gegevens staan, welke personen toegang hebben en vanaf welke apparaten je gegevens kunnen worden ingezien en bewerkt.
+    </p>
+  </div>
+
+  <div class="flex_box_item">
+    <label class="container"><input type="checkbox" id="2" onchange="update(this)"><span class="checkmark"></span>Maak een databeschermingsplan</label>
+    <p>
+      Verwerk alle maatregelen die je van plan bent te nemen in een databeschermingsplan, zodat je kunt aantonen dat je actief bezig bent met de GDPR. Zorg ook dat duidelijk is wie welke verantwoordelijkheid heeft binnen de organisatie.
+    </p>
+  </div>
+
+  <div class="flex_box_item">
+    <label class="container"><input type="checkbox" id="3" onchange="update(this)"><span class="checkmark"></span>Controleer je partners</label>
+    <p>
+      Maak een overzicht van de servicepartners (bijvoorbeeld cloud providers en SaaS- providers) die toegang hebben tot jouw gegevens en ga na of zij de GDPR nastreven. Is dit niet het geval? Ga dan met je partner in gesprek om een oplossing te vinden.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
