@@ -22,7 +22,7 @@ p {
 	padding-top: 5px;
 	padding-right: 25px;
 	padding-left: 25px;
-	
+
 }
 
 h3 {
@@ -64,7 +64,7 @@ h3 {
 #flex_box_bottom {
 	display: flex;
 	width: 100%;
-	margin: auto;	
+	margin: auto;
 	justify-content: center;
 }
 
@@ -77,14 +77,14 @@ h3 {
 
 #box_right {
 	width: 50%;
-	background-color: white;
+	background-color: #ffffff;
 	margin-bottom: 50px;
 	margin-left: -50px;
 	padding: 30px;
 }
 
 #box_left p {
-	color: white;
+	color: #ffffff;
 	z-index: 2;
 }
 
@@ -105,7 +105,7 @@ h3 {
 }
 
 #source ul li a {
-	color: black;
+	color: #000000;
 	text-decoration-style: none;
 	font-size: 12px;
 }
@@ -116,7 +116,7 @@ h3 {
 
 /*FOOTER*/
 
-.footer_wrapper {	
+.footer_wrapper {
 	display: inline-flex;
 	width: 100%;
 	justify-content: flex-end;
@@ -134,7 +134,7 @@ h3 {
 }
 
 .footer_list p {
-	color: black;
+	color: #000000;
 	font-size: 12px;
 	line-height: 1.6;
 }
@@ -157,7 +157,7 @@ h3 {
 }
 
 a {
-	color: black;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -192,12 +192,12 @@ a {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: #ffffff;
+    border: 1px solid #000000;
 }
 
 .container input:checked ~ .checkmark {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -218,7 +218,7 @@ a {
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid black;
+    border: solid #000000;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -231,4 +231,3 @@ label {
 	font-weight: 900;
 	color: navy;
 }
-
