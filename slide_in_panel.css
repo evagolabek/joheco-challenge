@@ -1,0 +1,368 @@
+/* SLIDER BUTTON */
+.cd-btn {
+display: inline-block;
+float: right;
+padding: 12px 40px;
+border-radius: 500px;
+color: #32bdee;
+background: #fff;
+-webkit-box-shadow: 0 4px 10px rgba(54,66,91,.25);
+box-shadow: 0 4px 10px rgba(54,66,91,.25);
+text-align: center;
+line-height: 16px;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.cd-btn:hover {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* SLIDER PANEL */
+
+.cd-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s;
+  transition: visibility 0s 0.6s;
+}
+
+.cd-panel::after {
+  /* overlay layer */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: background 0.3s 0.3s;
+  transition: background 0.3s 0.3s;
+}
+
+.cd-panel.cd-panel--is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+
+.cd-panel.cd-panel--is-visible::after {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: background 0.3s 0s;
+  transition: background 0.3s 0s;
+}
+
+.cd-panel__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  /* image replacement */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.cd-panel__close::before, .cd-panel__close::after {
+  /* close icon created in CSS */
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  height: 3px;
+  width: 20px;
+  background-color: #424f5c;
+  /* this fixes a bug where pseudo elements are slighty off position */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.cd-panel__close::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cd-panel__close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cd-panel__close:hover {
+  background-color: #424f5c;
+}
+
+.cd-panel__close:hover::before, .cd-panel__close:hover::after {
+  background-color: #ffffff;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.cd-panel__close:hover::before {
+  -webkit-transform: rotate(220deg);
+      -ms-transform: rotate(220deg);
+          transform: rotate(220deg);
+}
+
+.cd-panel__close:hover::after {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.cd-panel--is-visible .cd-panel__close::before {
+  -webkit-animation: cd-close-1 0.6s 0.3s;
+          animation: cd-close-1 0.6s 0.3s;
+}
+
+.cd-panel--is-visible .cd-panel__close::after {
+  -webkit-animation: cd-close-2 0.6s 0.3s;
+          animation: cd-close-2 0.6s 0.3s;
+}
+
+@-webkit-keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+.cd-panel__container {
+  background-color: #000000;
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  background: #dbe2e9;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+}
+
+.cd-panel--from-right .cd-panel__container {
+  right: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.cd-panel--from-left .cd-panel__container {
+  left: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+.cd-panel--is-visible .cd-panel__container {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-panel__container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-panel__container {
+    width: 33%;
+  }
+}
+
+.cd-panel__content {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 5% 70px 5%;
+  overflow: auto;
+  /* smooth scrolling on touch devices */
+  -webkit-overflow-scrolling: touch;
+}
+
+h1 {
+  color: black;
+  font-family: 'Nunito',sans-serif;
+}
+
+.cd-panel__content p {
+  color: #36425b;
+  font-family: 'Nunito',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cd-panel__content p:first-of-type {
+  margin-top: 0;
+}
+
+#text_area {
+  height: 192px;
+  width: 360px;
+
+}
+
+h5 {
+  color: #727b8c;
+  font-family: 'Nunito',sans-serif;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.details_area {
+  width: 360px;
+  height: 48px;
+}
+
+/* button from the joheco website */
+#submit_btn {
+display: inline-block;
+padding: 12px 40px!important;
+border-radius: 500px;
+background: -webkit-gradient(linear,left top,right bottom,from(#4fffd5),to(#0396ff));
+background: linear-gradient(to bottom right,#4fffd5,#0396ff);
+-webkit-box-shadow: 0 4px 10px rgba(50,189,238,.25);
+box-shadow: 0 4px 10px rgba(50,189,238,.25);
+color: #fff;
+text-align: center;
+font-family: Nunito,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 16px;
+cursor: pointer;
+-webkit-transition: -webkit-box-shadow 150ms linear;
+transition: -webkit-box-shadow 150ms linear;
+transition: box-shadow 150ms linear;
+transition: box-shadow 150ms linear,-webkit-box-shadow 150ms linear;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+color: #fff;
+}
+
+.rc-anchor-container {
+  background: #4a90e2;
+  width: 250px;
+  height: 70px;
+  box-shadow: 1px 3px #888888;
+}
+
+.rc-anchor-visible-text {
+
+    color: white;
+    display: inline-block;
+    font-family: 'Nunito',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    height: 36px;
+    line-height: 20px;
+    padding: 12px 8px;
+    white-space: nowrap;
+    width: 154px;
+}
+
+.rc-anchor-img {
+  float: right;
+  display: inline-block;
+  align-content: center;
+  height: 70px;
+  width: 70px;
+  background: #f1f1f1;
+}
+
+#read-here {
+  font-size: 14px;
+}
+
+#rc-img {
+  padding-top: 8px;
+  padding-left: 10px;
+  margin: auto;
+  width:"40px";
+  height:"40px";
+}
+
+#link-anchor{
+  color: white;
+}
+
+#reg-details dd, dt{
+  margin-bottom: 8px;
+  margin-left: 0;
+  font-size: 15px;
+}
+
+#red-details dt {
+  font-weight: f;
+}
+
+#checkboxes2 label {
+  color: black;
+  font-size: 16px;
+  font-family: 'Nunito',sans-serif;
+  font-style: normal;
+}
+
+#policy a {
+  color: #32bdee;
+  text-decoration: none;
+}
