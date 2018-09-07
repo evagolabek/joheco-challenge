@@ -1,6 +1,4 @@
-/* --------------------------------
-Primary style
--------------------------------- */
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,13 +16,10 @@ body {
 }
 
 a {
-  color: #89ba2c;
+  color: #32bdee;
   text-decoration: none;
 }
 
-/* --------------------------------
-Slide In Panel - by CodyHouse.co
--------------------------------- */
 .cd-main-content {
   text-align: center;
 }
@@ -36,19 +31,21 @@ Slide In Panel - by CodyHouse.co
 }
 
 .cd-btn {
-  float: right;
-  position: relative;
-  display: inline-block;
-  padding: 1em 2em;
-  background-color: white;
-  color: #32bdee;
-  border-radius: 50em;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.1);
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+display: inline-block;
+float: right;
+padding: 12px 40px;
+border-radius: 500px;
+color: #32bdee;
+background: #fff;
+-webkit-box-shadow: 0 4px 10px rgba(54,66,91,.25);
+box-shadow: 0 4px 10px rgba(54,66,91,.25);
+text-align: center;
+line-height: 16px;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 .cd-btn:hover {
@@ -323,7 +320,7 @@ h5 {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 16px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -335,6 +332,7 @@ h5 {
     position: absolute;
     opacity: 0;
     cursor: pointer;
+    font-size: 12px;
 }
 
 /* Create a custom checkbox */
@@ -342,10 +340,11 @@ h5 {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     background-color: #ffffff;
-    border: 1px solid #000000;
+    border: 0.5px solid #000000;
+    border-radius: 2px;
 }
 
 .tick_box input:checked ~ .checkmark {
@@ -377,6 +376,7 @@ h5 {
     transform: rotate(45deg);
 }
 
+/* button from the joheco website */
 #submit_btn {
 display: inline-block;
 padding: 12px 40px!important;
@@ -401,4 +401,56 @@ transition: box-shadow 150ms linear,-webkit-box-shadow 150ms linear;
 -ms-user-select: none;
 user-select: none;
 color: #fff;
+}
+
+label {
+  font-size: 12px;
+  color: #000000;
+  font-family: 'Nunito',sans-serif;
+  font-weight: 500px;
+}
+
+.rc-anchor-container {
+  background: #4a90e2;
+  width: 250px;
+  height: 70px;
+  box-shadow: 1px 3px #888888;
+}
+
+.rc-anchor-visible-text {
+
+    color: white;
+    display: inline-block;
+    font-family: Roboto,helvetica,arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    height: 36px;
+    line-height: 20px;
+    padding: 12px 16px;
+    white-space: nowrap;
+    width: 154px;
+}
+
+.rc-anchor-img {
+  float: right;
+  align-content: center;
+  height: 70px;
+  vertical-align: top;
+  width: 70px;
+  background: white;
+}
+
+img {
+  top: 50%; */
+  left: 50%;
+  padding-top: 8px;
+  padding-left: 10px;
+  margin: auto;
+  width:"40px";
+  height:"40px";
+}
+
+
+#link-anchor{
+  color: white;
 }
